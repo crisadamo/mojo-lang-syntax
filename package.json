@@ -1,0 +1,53 @@
+{
+  "name": "mojo",
+  "displayName": "Mojo-lang",
+  "description": "Mojo Language",
+  "version": "0.0.1",
+  "publisher": "crisadamo",
+  "homepage": "https://github.com/crisadamo/mojo-lang-syntax",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/crisadamo/mojo-lang-syntax.git"
+	},
+  "icon": "icon.png",
+	"keywords": [
+		"mojo",
+		"modular"
+	],
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "mojo",
+        "aliases": [
+          "Mojo",
+          "mojo"
+        ],
+        "extensions": [
+          ".mojo",
+          ".🔥"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mojo",
+        "scopeName": "source.mojo",
+        "path": "./syntaxes/mojo.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+		"to-json": "npx js-yaml syntaxes/mojo.tmLanguage.yaml > syntaxes/mojo.tmLanguage.json",
+		"vsce-package": "vsce package"
+	},
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
