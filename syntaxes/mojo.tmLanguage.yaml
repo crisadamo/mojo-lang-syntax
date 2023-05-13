@@ -68,7 +68,7 @@ repository:
     - include: '#magic-names'
   builtin-types:
     match: "(?x)\n  (?<!\\.) \\b(\n    bool | bytearray | bytes | classmethod | complex
-      | dict\n   | Int | UI8 | UI16 | UI32 | UI64 | SI8\n      | SI16 | SI32 | SI64
+      | dict\n   | Int | UI8 | UI16 | UI32 | UI64 | SI8 | String\n      | SI16 | SI32 | SI64
       | UI32 | UI64 | Bool\n     | F8 | F32 | F43 | address | index | invalid\n     |
       float | frozenset | int | list | object | property\n    | set | slice | staticmethod
       | str | tuple | type\n\n    (?# Although 'super' is not a type, it's related
@@ -2434,7 +2434,7 @@ repository:
     begin: (let|var)
     beginCaptures:
       '1':
-        name: punctuation.separator.annotation.result.python
+        name: storage.type.function.python
     end: (?=\s)
     patterns:
     - include: '#expression'

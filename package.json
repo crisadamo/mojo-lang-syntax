@@ -2,7 +2,7 @@
   "name": "mojo",
   "displayName": "Mojo-lang",
   "description": "Mojo Language",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "crisadamo",
   "homepage": "https://github.com/crisadamo/mojo-lang-syntax",
 	"repository": {
@@ -32,6 +32,10 @@
           ".mojo",
           ".🔥"
         ],
+        "icon": {
+          "light": "./icons/light.png",
+          "dark": "./icons/dark.png"
+        },
         "configuration": "./language-configuration.json"
       }
     ],
